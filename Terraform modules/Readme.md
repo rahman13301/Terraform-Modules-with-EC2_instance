@@ -3,7 +3,7 @@
 <img width="707" height="587" alt="image" src="https://github.com/user-attachments/assets/70dff06c-8bfc-4bfc-9c31-58a3bb0514da" />
 
 
-- Now create **variable.tf** file inside Terraform modules forlder.
+- Now create **variables.tf** file inside ec2 forlder.
  <img width="1164" height="390" alt="image" src="https://github.com/user-attachments/assets/448170f5-a68b-42e1-b52c-593a9782f1e0" />
 
 

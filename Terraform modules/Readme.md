@@ -101,6 +101,9 @@
 
   <img width="920" height="302" alt="image" src="https://github.com/user-attachments/assets/218eadaa-7d21-4db9-9ba4-7c875dcbf078" />
 
+  <img width="1111" height="225" alt="image" src="https://github.com/user-attachments/assets/53452a92-2eaa-49d0-8041-f7962b3fa80d" />
+
+
 
 
 - This is how we can setup modules, if we need more resources like VPC, EKS or S3 then we have to write separate modules for each resouces. Multiple members can execute this project without writing main.tf, output.tf and variable.tf files they just need to write modular "main.tf" code.

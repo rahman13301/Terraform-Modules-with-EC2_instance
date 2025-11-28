@@ -80,27 +80,40 @@
 
 
 ## Creating variables by Terraform modules:
-- Create a new folder and move all 3 terraform files (main.tf, variables.tf and output.tf) in to folder and we don't require terraform.tfvars file here.
-- Here I have created folder called "modules/ec2_instance". Instead of writing code for multiple times we have created modules (main.tf, variables.tf and output.tf) and calling those modules with "main.tf" file and the source path of modules is "./modules/ec2_instance" which shown below.
+- Created a new folder called Terraform-Modules and moved all 3 terraform files (main.tf, variables.tf and output.tf) in to folder and we don't require terraform.tfvars file here, because we are defining values in another main file called main.tf which is preset on ec2 folder (outside of Terraform-Modules folder)
+- Here I have created folder called "Terraform-Modules". Instead of writing code for multiple times we can create modules (main.tf, variables.tf and output.tf) and calling those modules with "main.tf" file and the source path of modules is "./Terraform-Modules" which shown below.
   
-<img width="1072" height="359" alt="image" src="https://github.com/user-attachments/assets/03b0da72-33bb-43c7-a65e-6c8b7b361d70" />
+<img width="1239" height="351" alt="image" src="https://github.com/user-attachments/assets/66a2852b-1a7b-41f8-af48-6cfc20061670" />
+
+- The below codes are in **main.tf**,**variables.tf**and **output.tf** files which are inside "Terraform-Modules" folder.
+
+<img width="1228" height="606" alt="image" src="https://github.com/user-attachments/assets/81ae85c5-7e3a-4c28-a0df-134a4d77237d" />
+<img width="1256" height="340" alt="image" src="https://github.com/user-attachments/assets/c27ef8df-3825-4a4c-8ad0-3340dbbf3201" />
+<img width="1287" height="326" alt="image" src="https://github.com/user-attachments/assets/e9e9d313-2206-4ba3-989c-d3908d930d96" />
+
 
 - Now initializing and planning the peoject:
 
- <img width="781" height="337" alt="image" src="https://github.com/user-attachments/assets/9b3a2219-4e71-445e-9766-d34534646250" />
-
-
-  ![Uploading image.png…]()
+ <img width="873" height="441" alt="image" src="https://github.com/user-attachments/assets/21632fab-1f0d-484d-a61b-cbfd6b74bfca" />
 
 
 - Now we can see EC2 instance created in terminal and AWS console by utilizing terraform modules.
 
-  <img width="899" height="231" alt="image" src="https://github.com/user-attachments/assets/b26db5d1-9fd4-4197-97af-19b5dc0ce452" />
+  <img width="920" height="302" alt="image" src="https://github.com/user-attachments/assets/218eadaa-7d21-4db9-9ba4-7c875dcbf078" />
 
-  <img width="1399" height="197" alt="image" src="https://github.com/user-attachments/assets/666cc6ec-b8d9-4861-883d-e686d5dc4455" />
 
 
 - This is how we can setup modules, if we need more resources like VPC, EKS or S3 then we have to write separate modules for each resouces. Multiple members can execute this project without writing main.tf, output.tf and variable.tf files they just need to write modular "main.tf" code.
 
-<img width="703" height="330" alt="image" src="https://github.com/user-attachments/assets/4401fecd-6c3c-40f3-8e34-b4f7ca6453d0" />
+```
+provider "aws" {
+  region = "us-east-1"
+}
+module "name" {
+    source = "./Terraform-Modules"
+    ami_value="ami-0fa3fe0fa7920f68e"
+    instance_type_value="t2.micro"
+    subnet_id_value="subnet-05aff75cc18978861"
+}
+```
 

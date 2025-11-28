@@ -61,7 +61,8 @@
 
 - In order to perform and initiate Terraform  module, you need 3 files in a specific forlder i,e main.tf, variables.tf and output.tf. Now we are creating output.tf and printing public ip of the instance.
 
-<img width="894" height="275" alt="image" src="https://github.com/user-attachments/assets/fa6e1f87-6e90-47cd-a48d-08e5cb9b0e6b" />
+<img width="1124" height="312" alt="image" src="https://github.com/user-attachments/assets/163e35c3-1d36-41c1-9e37-5573e45dec0e" />
+
 
 - Enter similar commands to create EC2 instance.
   ```
@@ -69,10 +70,12 @@
   terraform plan
   terraform apply
   ```
-  <img width="867" height="276" alt="image" src="https://github.com/user-attachments/assets/fc2a6ee3-4a84-4704-92e0-10bdcb6a88ee" />
-  
-  <img width="1234" height="272" alt="image" src="https://github.com/user-attachments/assets/54fb39ab-da9c-4d74-82dd-39a520a4acdf" />
+  <img width="873" height="328" alt="image" src="https://github.com/user-attachments/assets/b49e8a47-cff6-4fe1-a3eb-e48504f32660" />
 
+  
+  <<img width="949" height="279" alt="image" src="https://github.com/user-attachments/assets/8df2ff8a-dfcf-48c1-9009-e378767687c5" />
+
+  <img width="1117" height="462" alt="image" src="https://github.com/user-attachments/assets/45d7184b-0b49-4404-b9d9-0ece381fbbbe" />
 
 
 
@@ -84,9 +87,11 @@
 
 - Now initializing and planning the peoject:
 
-  <img width="1006" height="222" alt="image" src="https://github.com/user-attachments/assets/13ce3924-49cd-4ea2-9e2b-a9cd27dd14f5" />
+ <img width="781" height="337" alt="image" src="https://github.com/user-attachments/assets/9b3a2219-4e71-445e-9766-d34534646250" />
 
-  <img width="1072" height="297" alt="image" src="https://github.com/user-attachments/assets/75eca633-2c2f-40e9-ba64-2df9784a7e23" />
+
+  ![Uploading image.png…]()
+
 
 - Now we can see EC2 instance created in terminal and AWS console by utilizing terraform modules.
 
